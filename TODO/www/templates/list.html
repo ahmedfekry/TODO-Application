@@ -1,0 +1,24 @@
+      <ion-view view-cache="false">
+        <ion-header-bar class="bar-positive">
+        <h1 class="title">List Of Tasks</h1>
+        <button class="button button-icon ion-minus-circled" 
+        ng-click="data.showDelete = !data.showDelete; data.showReorder = false;"></button>
+
+        <button class="button button-icon ion-navicon" 
+        ng-click="data.showReorder = !data.showReorder; data.showDelete = false;"></button>
+      </ion-header-bar>
+    
+      <ion-content>
+      
+        <ion-list show-delete="data.showDelete" show-reorder="data.showReorder">
+            <ion-item ng-repeat="task in tasks" href="#">
+                              {{task.title}}
+                <ion-reorder-button class="ion-navicon" on-reorder="moveItem(task,$fromIndex,$toIndex)"></ion-reorder-button>
+                <ion-delete-button class="ion-minus-circled" ng-click="delete(task)">
+            </ion-item>
+        </ion-list>
+
+      </ion-content>
+      </ion-view>
+
+      

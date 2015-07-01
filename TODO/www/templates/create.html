@@ -1,0 +1,16 @@
+<div class="list" ng-controller="CreateTaskController">
+	<label class="item item-input item-stacked-label">
+    	<span class="input-label">Title</span>
+        <input type="text" placeholder="title" ng-model="title">
+    </label>
+
+    <label class="item item-input item-stacked-label">
+    	<span class="input-label">Description</span>
+        <input type="text" placeholder="description" ng-model="description">
+    </label>
+
+    <label class="item item-floating-label">
+    	<button class="button button-full button-positive"  ng-click="save()" >
+        	Submit         </button>
+    </label>
+</div>
